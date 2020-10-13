@@ -55,7 +55,7 @@ module.exports = {
             "howto/social-login",
             "howto/authentication-theme",
             "howto/work-with-sott",
-            "howto/add-web-sso"
+            "howto/web-sso"
           ],
           Concepts: [
             "concepts/idx-overview",

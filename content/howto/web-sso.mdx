@@ -1,17 +1,24 @@
 ---
-title: Web SSO
+title: Enable Web SSO
 description: ""
-summary: "A guide on how to add web sso"
+summary: "A guide on how to implement web sso in any web application"
 ---
 
+Single sign on (SSO) is the authentication mechanism which allows users to sign in different software systems.  After signing into one application user is signed into another application automatically. 
+
+## Web SSO
 Web SSO is a method of browser-based session management that utilizes browser storage mechanisms like sessionStorage, localStorage, cookies to maintain the user’s session across your applications.
+
+## How does it work in LoginRadius ?
 A centralized domain managed by LoginRadius Auth Page ( IDX ) is utilized to perform the authentication. When requested, this centralized domain shares the session with authorized applications.
 
 So that the users logged in to one application automatically logs into other applications, independent of technology, platform or domain the user is using.
 
+Let’s take an example, We login into one of our application , on successful login we receive an access token and after that we can 
+
 ## Configuration
 
-To use LoginRadius Web SSO, make sure the respective doamain is whitelisted under Domain Whitelisting under LoginRadius dashboard.
+To use LoginRadius Web SSO, make sure the respective domain is whitelisted under Domain Whitelisting under LoginRadius dashboard.
 
 
 <div style="text-align:center">
@@ -56,6 +63,7 @@ $.ajax({
                 //write your code here for error handling
             }
         });
+
 ```
 
 ### Setting the SSO Token via HTTPs Redirect
@@ -80,6 +88,6 @@ Example of a redirect method:
 if(safari){ // This is for safari browser, you need to check if your user is using safari or not
 window.location="https://<sitename>.hub.loginradius.com/ssologin/setSafariToken?token=<accesstoken>&apiKey=<apikey>&callback=<callbackURL>"
 }else{
-   Ajax function provided previously
+   	Ajax function provided previously
 }
 ```
