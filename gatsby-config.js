@@ -63,7 +63,7 @@ module.exports = {
             "faq/supported-browsers",
           ],
         },
-        githubRepo: "LoginRadius/docs",
+        githubRepo: "ex-howiebbq/sisi-d",
       },
     },
     {
@@ -104,5 +104,5 @@ module.exports = {
       },
     },
   ],
-  pathPrefix: `/docs/developer`,
+  pathPrefix: `/sisi-d/developer`,
 };
